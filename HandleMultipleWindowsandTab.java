@@ -19,9 +19,9 @@ public class HandleMultipleWindowsandTab {
 		String oldwindow = driver.getWindowHandle();
 		driver.switchTo().newWindow(WindowType.TAB);
 		driver.navigate().to("http://leafground.com/pages/Button.html");
-		driver.switchTo().window(oldwindow);
 		
 		 String Currentwindow = driver.getWindowHandle(); 
+		 driver.switchTo().window(oldwindow);
 		 WebElement start = driver.findElement(By.xpath("//button[@id='home']")); 
 		 start.click();
 		 Set<String> newwindows = driver.getWindowHandles(); 
