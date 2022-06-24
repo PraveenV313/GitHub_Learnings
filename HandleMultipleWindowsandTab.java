@@ -17,6 +17,7 @@ public class HandleMultipleWindowsandTab {
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://leafground.com/pages/Window.html");
 		String oldwindow = driver.getWindowHandle();
+		//Handling with new Tab
 		driver.switchTo().newWindow(WindowType.TAB);
 		driver.navigate().to("http://leafground.com/pages/Button.html");
 		
