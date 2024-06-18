@@ -1,0 +1,87 @@
+Alize   --> CS, CS2, CS3
+ACT  --> CPU5, CPU6, CPU7, CPU7s2, CPU8
+Appliance Server   --> IBM, HP ...   For e.g : 24GB Ram & 2TB HDD
+
+One OXE --> 1GB Ram & Min 60 to 80 GB HDD
+
+Virtualization   --> VMWare Esxi, Hyper-v , KVM & Nutanix
+
+OXE is linux based Application...
+Install Linux first..
+
+Latest linux is 197.009  -> xxx.yyy
+
+Full delivery  --> A1.100, B1.100, .... N2.100   --> N2.510.10  --> N3.100 .. N3.200
+Static Patch  --> A1.100.1 , A1.100.2 
+Dynamic Patch --> A1.100.1.a
+
+
+
+IP Address:
+xxx.yyy.aaa.bbb
+172.19.xxx.yyy
+172.19.116.254  --> Router
+0 to 253
+
+255.255.255.255
+0 to 255  --> 256 
+
+
+Login details of 172.19.116.131 OXE
+
+Password for mtcl user : AubTraining2022$
+
+For swinst login
+user : swinst
+password: SoftInst
+
+
+For root login
+
+user : su (Super User)
+password: letacla1   (default letacla)
+
+
+
+1. Login to Digi then connect the console of Physical CS 
+2. Note down the MAC address  (After giving "grubboot ETHER" with root login)
+3. login to SOT & select "Easy" and create the project
+4. GIve the details of Hardware type, Keyboard, Country, IP address & MAC & Hostname
+5. Finally Deploy  
+
+
+After Installation, Just execute "netadmin" and configure IP Address, Network number & Node number & Main, Stdby (If required)
+
+
+Node number 0 to 99 
+My oxe --> Node no: 1
+
+Network number: 10
+
+Then create an Empty Database by logon to swinst
+
+
+OPS Installation:
+
+1. Execute "spadmin"
+
+Path to copy License File --> cd /DHS3data/mao/
+
+FTP --> File transfer protocol
+
+--> ftp <OXE_IP> 
+--> Give bi & ha command
+--> cd /dhs3data/mao    --> takes to that particular path
+--> THen use "mput <filename>"   --> to Put the file in desired location
+
+--> Login to OXE and goto "cd /DHS3data/mao"
+--> execute "cp <filename> software.mao"
+--> execute ll so* and compare file size
+
+
+Linux command to remember :
+
+ll --> to list file in name order
+ls --> to list in column view
+ls -lrt --> to list in detailed view of ascender order of date.
+ll so*  --> list file name start from "so"

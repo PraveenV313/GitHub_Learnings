@@ -1,0 +1,77 @@
+Installation
+Netadmin
+EMpty DB creation
+OPS Installation 
+RUNTEL execution  --> Running the Telephonic Application
+
+Important commands:
+
+1. RUNTEL
+2. role
+3. siteid
+4. mgr
+
+Go to mgr  --> System --> Review/Modify  --> ENter (Will select All instance) & Ctrl+v
+
+Creating ACT Shelf
+
+---> Should be created with Shelf 0 as "Main ACT shelf" and 0ther Shelf as "Peripheral ACT Shelf"
+
+Creating ACT Boards
+
+6 & 10th position is for CPU creation
+
+eUA16 Board is used for TDM Set creation
+Z12 Board is used for Analog Set creation
+NPREA & BRA4 is used for Trunk creation
+
+Creating Alize shelf 
+
+--> Automatically Shelf 0 is created  (Applicable for Appliance server & VM).
+
+Creating Alize Boards
+
+0th Position is used for Creating GD (GD2, GD3 / GD4)
+
+UAI16 Board is used for TDM Set creation
+SLI12 Board is used for Analog Set creation
+MG-PRAT1 , MG-PRAT2 is used for Trunk creation
+
+
+
+
+Diff INTIPB & INTIPA is  --> INTIPB is inserted in 6th / 10th position in ACT Shelf  (To provide power supply and to extend ACT Rack)
+                             INTIPA is inserted in other than 6th / 10th position in ACT Shelf
+
+
+INTIPB (INTIP2B, INTIP3B)  --  Same as GD / GD2/ GD3  --> Giving MAC Address alone in mgr -- shelf -- D/H -- Board -- D/h -- Ethernet parameters
+
+
+INTIPA (INTIP2A/ INTIP3A) -- Need to provide IP address, Netmask & Gateway IP in mgr -- shelf -- D/H -- Board -- D/h -- Ethernet parameters
+
+
+Go to console of INTIP / GD --> login with "root" and execute "mgconfig" and provide "IP details"
+
+
+
+Active side (N2.510.8) & In-active side (N1.291.66)  --> execute "ver2cho switch"
+
+
+
+
+Software Installation
+
+GO to swinst --> Expert menu --> Package installation & Provide Server IP address  (Must be installed in Inactive side)
+
+To install Linux --> give n1.291.delivery/pcmao/boot_res/bootp/linux
+then give Linux version --> 183.000
+
+Note: After installed Linux in Inactive side, Install Full delivery also in In-active side.
+
+GO to swinst --> Expert menu --> delivery installation & Provide Server IP address
+
+To Install Full delivery --> n2.510.delivery
+To Install a Static Patch --> patch_n2.510.10
+To install a dynamic patch --> dyn_n2.510.10.a
+Secure patch installation --> sn2.510.10.a
+
