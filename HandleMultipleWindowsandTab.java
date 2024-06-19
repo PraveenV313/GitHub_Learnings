@@ -32,7 +32,7 @@ public class HandleMultipleWindowsandTab {
 		 } 
 		 WebElement newclick = driver.findElement(By.xpath("//*[@alt='Buttons']")); 
 		 newclick.click();
-		 driver.quit(); 
+		 driver.close(); 
 		 driver.switchTo().window(Currentwindow);
 		 
 		
